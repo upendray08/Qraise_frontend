@@ -21,6 +21,7 @@ const Login = () => {
                <div>
                     <Navbar />
                </div>
+               <p>Hit there</p>
                <div>
                     <div class="page" style={stylee}>
                          <div class="register">
