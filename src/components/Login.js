@@ -1,19 +1,15 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { NavLink } from 'react-router-dom'
 
 const stylee = {
      width: "35%",
-     height: "560px",
-     marginRight: "200px",
-     marginTop: "80px",
-     backgroundColor: "rgba(255, 255, 255, 0.074)",
-     marginBottom: "50px",
-     backdropFilter: "blur(10px)",
+     height: "420px",
+     margin: "50px auto",
+     backgroundColor: "rgb(54 54 54 / 20%)",
+     // backdropFilter: "blur(10px)",
      borderRadius: "20px",
      boxShadow: " 0px 0px 10px 2px rgb(101 78 138)",
-     marginLeft: '100px',
-     padding: '20px'
+     padding: '30px'
 }
 const Login = () => {
      return (
@@ -24,21 +20,24 @@ const Login = () => {
                <div>
                     <div class="page" style={stylee}>
                          <div class="register">
+                              <br />
+                              <h2 style={{ textAlign: 'center', fontWeight: '500' }}>Login</h2>
+                              <br />
+                              <h6 style={{ textAlign: 'center', fontWeight: '500' }}>Already have an account.</h6>
                               <form>
                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        <label for="email" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
                                    </div>
                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" />
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" />
                                    </div>
-                                   <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                   <br />
+                                   <div class="mb-3" style={{ flexDirection: 'row-reverse', display: 'flex' }}>
+                                        <button type="submit" class="btn btn-primary">Cancel</button>
+                                        <button type="submit" style={{ marginRight: '5px' }} class="btn btn-primary">Submit</button>
                                    </div>
-                                   <button type="submit" class="btn btn-primary">Submit</button>
                               </form>
                          </div>
                     </div>

@@ -1,10 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { NavLink } from 'react-router-dom'
 
 const stylee = {
      width: "35%",
-     height: "560px",
+     height: "600px",
      margin: "50px auto",
      backgroundColor: "rgb(54 54 54 / 20%)",
      // backdropFilter: "blur(10px)",
@@ -22,8 +21,9 @@ const Register = () => {
                     <div class="page" style={stylee}>
                          <div class="register">
                               <br />
-                              <h2 style={{ textAlign: 'center', fontWeight: '500' }}>New User! Register</h2>
+                              <h2 style={{ textAlign: 'center', fontWeight: '500' }}>Register</h2>
                               <br />
+                              <h6 style={{ textAlign: 'center', fontWeight: '500' }}>Create a new account.</h6>
                               <form>
                                    <div class="mb-3">
                                         <label for="name" class="form-label">Name</label>
@@ -38,7 +38,7 @@ const Register = () => {
                                         <input type="password" class="form-control" id="password" />
                                    </div>
                                    <div class="mb-3">
-                                        <label for="confirm_password" class="form-label">Password</label>
+                                        <label for="confirm_password" class="form-label">Re-type Password</label>
                                         <input type="password" class="form-control" id="confirm_password" />
                                    </div>
                                    <br />
