@@ -1,13 +1,217 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* css to form Components */
+/* Container for the FormPage */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form field styles */
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styles */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%;
+  }
+}
+
+/* css to cart components */
+/* Cart Page container */
+.cart-page {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Individual campaign item container */
+.campaign-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Campaign title */
+.campaign-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Campaign image */
+.campaign-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Campaign description */
+.campaign-description {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Container for donate button and supporters count */
+.campaign-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Donate button */
+.donate-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+  background-color: #0056b3;
+}
+
+/* Supporters count */
+.supporters-count {
+  font-weight: bold;
+}
+
+/* campaign page css */
+/* Campaign Page container */
+.campaign-page {
+  background-color: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Title style */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Create Campaign button (no additional CSS) */
+
+/* Cart Page container */
+.cart-page {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Individual campaign item container */
+.campaign-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  display: inline-block; /* Display cart items inline */
+  width: calc(33.33% - 20px);
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Campaign title within the cart item */
+.campaign-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Campaign image */
+.campaign-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Campaign description */
+.campaign-description {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Container for donate button and supporters count */
+.campaign-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Cart container styles */
+.cart-container-wrapper {
+  background-color: #f9f9f9;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
