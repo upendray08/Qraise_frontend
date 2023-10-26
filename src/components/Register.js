@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from './Navbar'
+import back from '../asset/backg.jpg'
 
 const stylee = {
-     width: "35%",
+     width: "40%",
      height: "600px",
-     margin: "50px auto",
-     backgroundColor: "rgb(54 54 54 / 20%)",
-     // backdropFilter: "blur(10px)",
+     margin: "0px auto",
+     backgroundColor: "rgba(176,176,176,0.7)",
+     backdropFilter: "blur(1px)",
      borderRadius: "20px",
      boxShadow: " 0px 0px 10px 2px rgb(101 78 138)",
      padding: '30px'
@@ -17,7 +18,7 @@ const Register = () => {
                <div>
                     <Navbar />
                </div>
-               <div>
+               <div style={{ backgroundImage: `url(${back})`, padding: '30px 50px', height: '667px', backgroundSize: "cover" }}>
                     <div class="page" style={stylee}>
                          <div class="register">
                               <br />
