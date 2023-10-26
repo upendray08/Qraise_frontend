@@ -45,7 +45,7 @@ const Register = () => {
                                    <br />
                                    <div class="mb-3" style={{ flexDirection: 'row-reverse', display: 'flex' }}>
                                         <button type="submit" class="btn btn-primary">Cancel</button>
-                                        <button type="submit" style={{ marginRight: '5px' }} class="btn btn-primary">Submit</button>
+                                        <button type="submit" style={{ marginRight: '5px' }} class="btn btn-primary">Register</button>
                                    </div>
                               </form>
                          </div>
