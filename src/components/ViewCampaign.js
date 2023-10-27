@@ -1,18 +1,15 @@
 import React from 'react'
 import UserNavbar from './UserNavbar'
 
-
-const Index = () => {
+const ViewCampaign = () => {
      return (
           <>
                <div>
                     <UserNavbar />
                </div>
-               <div>
-
-               </div>
+               View Campaign
           </>
      )
 }
 
-export default Index
+export default ViewCampaign

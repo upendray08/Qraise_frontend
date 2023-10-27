@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
 import back from '../asset/backg.jpg'
-import { NavLink } from 'react-router-dom'
 
 const stylee = {
      width: "40%",
