@@ -1,18 +1,15 @@
 import React from 'react'
 import UserNavbar from './UserNavbar'
 
-
-const Index = () => {
+const Notification = () => {
      return (
           <>
                <div>
                     <UserNavbar />
                </div>
-               <div>
-
-               </div>
+               Notification
           </>
      )
 }
 
-export default Index
+export default Notification

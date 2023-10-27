@@ -14,6 +14,7 @@ const FormPage = ({ addDataToCampaign }) => {
   const navigate = useNavigate();
 
   const handleFormSubmit = () => {
+    console.log(formData);
     addDataToCampaign(formData);
     navigate("/campaignpage");
   };
