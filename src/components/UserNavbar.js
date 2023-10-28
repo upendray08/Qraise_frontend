@@ -15,7 +15,7 @@ const UserNavbar = () => {
                     </div>
                     <div style={{ width: '100%', display: 'flex', flexDirection: 'row-reverse' }}>
                          <div style={{ width: '200px', padding: '10px', textAlign: 'center' }}>
-                              <img src={img} alt="" style={{ width: "30px", height: '30px', borderRadius: '10px', marginRight: '10px' }} />
+                              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" style={{ width: "30px", height: '30px', borderRadius: '10px', marginRight: '10px' }} />
                               {/* <NavLink to="/register" className={Styles.btnst}>Register</NavLink> */}
                               <NavLink to="/logout" style={{ padding: '10px' }} className={Styles.btnst}><i class="fa-solid fa-right-from-bracket"></i>Logout</NavLink>
                          </div>
@@ -40,6 +40,10 @@ const UserNavbar = () => {
                               <br />
                               <div className={Styles.side_btn}>
                                    <NavLink to="/view_campaign" className={Styles.btnsd}><i class="fa-solid fa-layer-group"></i> View Campaigns</NavLink>
+                              </div>
+                              <br />
+                              <div className={Styles.side_btn}>
+                                   <NavLink to="/your_campaign" className={Styles.btnsd}><i class="fa-solid fa-layer-group"></i> Your Campaigns</NavLink>
                               </div>
                               <hr />
                               <p>User Details</p>
