@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate, NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import back from '../asset/backg.jpg'
-import { NavLink } from 'react-router-dom'
 
 const stylee = {
      width: "40%",
@@ -14,6 +14,36 @@ const stylee = {
      padding: '30px'
 }
 const Login = () => {
+     const navigate = useNavigate();
+     const [email, setEmail] = useState("");
+     const [password, setPassword] = useState("");
+
+     const login = async (e) => {
+          e.preventDefault();
+          // console.log(email + " " + password);
+          const res = await fetch("http://localhost:5000/login", {
+               method: "POST",
+               headers: {
+                    "Content-Type": "application/json"
+               },
+               body: JSON.stringify({
+                    email, password
+               })
+          });
+          const data = await res.json();
+          // console.log(data.resp + " " + data.status);
+          if (data.status === 0) {
+               window.alert('Invalid user');
+          }
+          else if (data.status === 1) {
+               window.alert('User logged in successfully.')
+               navigate("/");
+          }
+          else if (data.status === 2) {
+               window.alert("Incorrect Password")
+          }
+     }
+
      return (
           <>
                <div>
@@ -26,21 +56,21 @@ const Login = () => {
                               <h2 style={{ textAlign: 'center', fontWeight: '500' }}>Login</h2>
                               <br />
                               <h6 style={{ textAlign: 'center', fontWeight: '500' }}>Already have an account.</h6>
-                              <form>
+                              <form method='POST' onSubmit={login}>
                                    <div class="mb-3">
                                         <label for="email" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+                                        <input value={email} name="email" onChange={e => setEmail(e.target.value)} type="email" class="form-control" id="email" aria-describedby="emailHelp" />
                                    </div>
                                    <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" />
+                                        <input value={password} name="password" onChange={e => setPassword(e.target.value)} type="password" class="form-control" id="password" />
                                    </div>
                                    <div class="mb-3" style={{ display: 'flex' }}>
                                         <NavLink to="/forget_pass" style={{ marginLeft: 'auto', color: 'black ' }}>Forgot Password?</NavLink>
                                    </div>
                                    <br />
                                    <div class="mb-3" style={{ flexDirection: 'row-reverse', display: 'flex' }}>
-                                        <button type="submit" class="btn btn-primary">Cancel</button>
+                                        <button class="btn btn-primary">Cancel</button>
                                         <button type="submit" style={{ marginRight: '5px' }} class="btn btn-primary">Login</button>
                                    </div>
                               </form>
