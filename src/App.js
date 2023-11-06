@@ -10,14 +10,16 @@ import Notification from './components/Notification';
 import UserProfile from './components/UserProfile';
 import YourCampaign from './components/YourCampaign';
 import DetailsCampaign from './components/DetailsCampaign';
+import Pay from './components/Pay';
 
 function App() {
      return (
           <>
                <Routes>
-                    <Route path='/' element={<Index />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/' element={<Index />} />
+                    <Route path='/logout' element={<Login />} />
                     <Route path='/forget_pass' element={<Forgot />} />
                     <Route path='/view_campaign' element={<ViewCampaign />} />
                     <Route path='/create_campaign' element={<CreateCampaign />} />
@@ -25,6 +27,7 @@ function App() {
                     <Route path='/notification' element={<Notification />} />
                     <Route path='/profile' element={<UserProfile />} />
                     <Route path='/details_campaign' element={<DetailsCampaign />} />
+                    <Route path='/pay' element={<Pay />} />
                </Routes>
           </>
      );

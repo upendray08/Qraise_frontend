@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import img from '../asset/logo.jpg'
+import blank_profile from '../asset/blank_profile.webp'
 import Styles from './Navbar.module.css'
 
-const UserNavbar = () => {
+const UserNavbar = (props) => {
+     const [username , setusername] = useState("")
+     useEffect(()=>{
+          setusername(props.username)
+     },[])
+     // console.log(props.state)
+     // console.log(props.userid , props.username)
      return (
           <>
                <div style={{ width: "100%", height: "55px", display: 'flex', boxShadow: "0px 0px 10px 2px rgb(101 78 138)" }}>
@@ -15,7 +22,8 @@ const UserNavbar = () => {
                     </div>
                     <div style={{ width: '100%', display: 'flex', flexDirection: 'row-reverse' }}>
                          <div style={{ width: '200px', padding: '10px', textAlign: 'center' }}>
-                              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" style={{ width: "30px", height: '30px', borderRadius: '10px', marginRight: '10px' }} />
+                              <img src={blank_profile} alt="" style={{ width: "30px", height: '30px', borderRadius: '10px', marginRight: '10px' }} />
+                              {/* <img src={props.image} alt="" style={{ width: "30px", height: '30px', borderRadius: '10px', marginRight: '10px' }} /> */}
                               {/* <NavLink to="/register" className={Styles.btnst}>Register</NavLink> */}
                               <NavLink to="/logout" style={{ padding: '10px' }} className={Styles.btnst}><i class="fa-solid fa-right-from-bracket"></i>Logout</NavLink>
                          </div>
@@ -28,11 +36,11 @@ const UserNavbar = () => {
                               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                          </div>
                          <div class="offcanvas-body">
-                              <p style={{}}>Welcome</p>
-                              <div className={Styles.side_btn} >
+                              <p>Welcome, {username} </p>
+                              {/* <div className={Styles.side_btn} >
                                    <NavLink to="/" className={Styles.btnsd}><i class="fa-solid fa-house"></i> Dashboard</NavLink>
                               </div>
-                              <hr />
+                              <hr /> */}
                               <p>Campaigns</p>
                               <div className={Styles.side_btn}>
                                    <NavLink to="/create_campaign" className={Styles.btnsd}><i class="fa-solid fa-square-plus"></i> Create Campaign</NavLink>
@@ -48,7 +56,7 @@ const UserNavbar = () => {
                               <hr />
                               <p>User Details</p>
                               <div className={Styles.side_btn}>
-                                   <NavLink to="/profile" className={Styles.btnsd}><i class="fa-solid fa-user"></i> Profile</NavLink>
+                                   <NavLink to={{ pathname: '/profile' }} className={Styles.btnsd}><i class="fa-solid fa-user"></i> Profile</NavLink>
                               </div>
                               <br />
                               <div className={Styles.side_btn}>

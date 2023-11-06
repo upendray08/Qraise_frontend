@@ -37,7 +37,8 @@ const Login = () => {
           }
           else if (data.status === 1) {
                window.alert('User logged in successfully.')
-               navigate("/");
+               // console.log(data.udata)
+               navigate("/",{state:data.udata , username:data.name});
           }
           else if (data.status === 2) {
                window.alert("Incorrect Password")
@@ -50,28 +51,28 @@ const Login = () => {
                     <Navbar />
                </div>
                <div style={{ backgroundImage: `url(${back})`, padding: '123px 50px', height: '667px', backgroundSize: "cover" }}>
-                    <div class="page" style={stylee}>
-                         <div class="register">
+                    <div className="page" style={stylee}>
+                         <div className="register">
                               <br />
                               <h2 style={{ textAlign: 'center', fontWeight: '500' }}>Login</h2>
                               <br />
                               <h6 style={{ textAlign: 'center', fontWeight: '500' }}>Already have an account.</h6>
                               <form method='POST' onSubmit={login}>
-                                   <div class="mb-3">
-                                        <label for="email" class="form-label">Email address</label>
-                                        <input value={email} name="email" onChange={e => setEmail(e.target.value)} type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+                                   <div className="mb-3">
+                                        <label htmlFor="email" className="form-label">Email address</label>
+                                        <input value={email} name="email" onChange={e => setEmail(e.target.value)} type="email" className="form-control" id="email" aria-describedby="emailHelp" />
                                    </div>
-                                   <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input value={password} name="password" onChange={e => setPassword(e.target.value)} type="password" class="form-control" id="password" />
+                                   <div className="mb-3">
+                                        <label htmlFor="password" className="form-label">Password</label>
+                                        <input value={password} name="password" onChange={e => setPassword(e.target.value)} type="password" className="form-control" id="password" />
                                    </div>
-                                   <div class="mb-3" style={{ display: 'flex' }}>
+                                   <div className="mb-3" style={{ display: 'flex' }}>
                                         <NavLink to="/forget_pass" style={{ marginLeft: 'auto', color: 'black ' }}>Forgot Password?</NavLink>
                                    </div>
                                    <br />
-                                   <div class="mb-3" style={{ flexDirection: 'row-reverse', display: 'flex' }}>
-                                        <button class="btn btn-primary">Cancel</button>
-                                        <button type="submit" style={{ marginRight: '5px' }} class="btn btn-primary">Login</button>
+                                   <div className="mb-3" style={{ flexDirection: 'row-reverse', display: 'flex' }}>
+                                        <button className="btn btn-primary">Cancel</button>
+                                        <button type="submit" style={{ marginRight: '5px' }} className="btn btn-primary">Login</button>
                                    </div>
                               </form>
                          </div>
